@@ -2,21 +2,31 @@
 
 void setup()
 {
-size(400, 400);
-background(0, 0, 0);
+size(400, 400, P3D);
+
 }
 
 void draw()
 {
+	background(0, 0, 0);     
 
-    stroke(255, 0, 0);
-    strokeWeight(1);
-    line(0,0,mouseX,mouseY);
-    stroke(0, 247, 0);
-    line(400,0,mouseX,mouseY);
-    stroke(0, 255, 255);
-    line(0,400,mouseX,mouseY);
-    stroke(9, 0, 255);
-    line(400,400,mouseX,mouseY);   
+
+noStroke();
+fill(0,mouseX,255);
+lights();
+translate(200, 200, 0);
+rotateX (mouseX * 0.03);
+rotateY (mouseY * 0.03);
+box(100, 100, 100);
+fill(255,mouseX,0);
+translate(100, 100, 0);
+rotateX (mouseX * 0.03);
+rotateY (mouseY * 0.03);
+box(50, 50, 50);
+
+
+
+
+
 }
 
